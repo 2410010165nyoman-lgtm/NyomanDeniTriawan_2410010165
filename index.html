@@ -3,181 +3,307 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portofolio Nyoman Deni</title>
+<title>Nyoman Deni | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    background:#f5f7fb;
-    color:#333;
-    line-height:1.6;
+    background:#0f172a;
+    color:#fff;
+}
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    backdrop-filter:blur(15px);
+    background:rgba(15,23,42,.7);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
 }
 
 .hero{
-    height:100vh;
-    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    min-height:100vh;
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
     text-align:center;
-    color:white;
-    padding:20px;
+    padding:0 20px;
+    background:
+    radial-gradient(circle at top right,#2563eb 0%,transparent 30%),
+    radial-gradient(circle at bottom left,#7c3aed 0%,transparent 30%);
 }
 
-.hero-content h1{
-    font-size:3rem;
+.hero h1{
+    font-size:4rem;
     margin-bottom:10px;
 }
 
-.hero-content p{
-    font-size:1.2rem;
-    margin-bottom:20px;
+.hero span{
+    color:#38bdf8;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    color:#cbd5e1;
+    margin-bottom:30px;
 }
 
 .btn{
     display:inline-block;
-    padding:12px 28px;
-    background:white;
-    color:#2563eb;
+    padding:14px 35px;
+    background:#38bdf8;
+    color:#0f172a;
     text-decoration:none;
     border-radius:50px;
-    font-weight:bold;
-    transition:0.3s;
+    font-weight:600;
+    transition:.3s;
 }
 
 .btn:hover{
-    transform:translateY(-3px);
+    transform:translateY(-5px);
 }
 
-.container{
-    width:90%;
-    max-width:1100px;
-    margin:auto;
-    padding:80px 0;
+section{
+    padding:100px 8%;
 }
 
-.section-title{
+.title{
     text-align:center;
-    margin-bottom:40px;
-    font-size:2rem;
-    color:#2563eb;
+    margin-bottom:50px;
+}
+
+.title h2{
+    font-size:2.5rem;
+    color:#38bdf8;
 }
 
 .about{
-    text-align:center;
-    max-width:700px;
+    max-width:900px;
     margin:auto;
+    text-align:center;
+    color:#cbd5e1;
 }
 
-.skills{
+.grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
 }
 
 .card{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:30px;
     transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 }
 
 .card h3{
-    color:#2563eb;
+    color:#38bdf8;
     margin-bottom:10px;
+}
+
+.card p{
+    color:#cbd5e1;
+}
+
+.project{
+    overflow:hidden;
+}
+
+.project img{
+    width:100%;
+    border-radius:12px;
+    margin-bottom:15px;
 }
 
 .contact{
     text-align:center;
 }
 
-.contact a{
-    color:#2563eb;
-    text-decoration:none;
+.contact p{
+    color:#cbd5e1;
+    margin:10px 0;
 }
 
 footer{
-    background:#111827;
-    color:white;
     text-align:center;
-    padding:20px;
+    padding:30px;
+    border-top:1px solid rgba(255,255,255,.1);
+    color:#94a3b8;
 }
 
 @media(max-width:768px){
-    .hero-content h1{
-        font-size:2.2rem;
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        gap:15px;
     }
 }
 </style>
-
 </head>
 <body>
 
+<nav>
+    <div class="logo">Nyoman Deni</div>
+
+    <ul>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#skills">Skill</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#contact">Kontak</a></li>
+    </ul>
+</nav>
+
 <section class="hero">
-    <div class="hero-content">
-        <h1>Halo, Saya Nyoman Deni</h1>
-        <p>Mahasiswa • Web Developer Pemula • Programmer Masa Depan</p>
-        <a href="#about" class="btn">Lihat Portofolio</a>
+    <div>
+        <h1>Halo, Saya <span>Nyoman Deni</span></h1>
+        <p>
+            Mahasiswa dan Web Developer Pemula yang sedang belajar
+            HTML, CSS, JavaScript, PHP, MySQL serta teknologi web modern.
+        </p>
+
+        <a href="#project" class="btn">Lihat Project</a>
     </div>
 </section>
 
-<section id="about" class="container">
-    <h2 class="section-title">Tentang Saya</h2>
+<section id="about">
+    <div class="title">
+        <h2>Tentang Saya</h2>
+    </div>
+
     <div class="about">
         <p>
-            Saya sedang belajar HTML, CSS, JavaScript, PHP, dan MySQL.
-            Saya senang membangun website modern serta terus mengembangkan
-            kemampuan pemrograman dan teknologi web.
+            Saya memiliki minat dalam pengembangan website dan teknologi.
+            Saat ini saya terus mengembangkan kemampuan dalam frontend,
+            backend, dan pengelolaan database untuk membangun aplikasi
+            yang modern, responsif, dan mudah digunakan.
         </p>
     </div>
 </section>
 
-<section class="container">
-    <h2 class="section-title">Keahlian</h2>
+<section id="skills">
+    <div class="title">
+        <h2>Keahlian</h2>
+    </div>
 
-    <div class="skills">
+    <div class="grid">
         <div class="card">
             <h3>HTML5</h3>
-            <p>Membuat struktur website yang rapi dan responsif.</p>
+            <p>Membangun struktur website yang baik dan SEO friendly.</p>
         </div>
 
         <div class="card">
             <h3>CSS3</h3>
-            <p>Mendesain tampilan website modern dan menarik.</p>
+            <p>Membuat desain modern, responsif, dan menarik.</p>
         </div>
 
         <div class="card">
             <h3>PHP</h3>
-            <p>Membangun aplikasi web dinamis berbasis server.</p>
+            <p>Mengembangkan aplikasi web berbasis server.</p>
         </div>
 
         <div class="card">
             <h3>MySQL</h3>
-            <p>Mengelola database untuk aplikasi web.</p>
+            <p>Mengelola data dan database aplikasi web.</p>
         </div>
     </div>
 </section>
 
-<section class="container contact">
-    <h2 class="section-title">Kontak</h2>
-    <p>Email: nyomandeni@email.com</p>
-    <p>GitHub: <a href="#">github.com/nyomandeni</a></p>
+<section id="project">
+    <div class="title">
+        <h2>Project Saya</h2>
+    </div>
+
+    <div class="grid">
+
+        <div class="card project">
+            <img src="https://picsum.photos/500/300?random=1" alt="">
+            <h3>Sistem Donasi</h3>
+            <p>Aplikasi donasi online menggunakan PHP dan MySQL.</p>
+        </div>
+
+        <div class="card project">
+            <img src="https://picsum.photos/500/300?random=2" alt="">
+            <h3>Website Portofolio</h3>
+            <p>Website pribadi untuk menampilkan profil dan karya.</p>
+        </div>
+
+        <div class="card project">
+            <img src="https://picsum.photos/500/300?random=3" alt="">
+            <h3>Dashboard Admin</h3>
+            <p>Tampilan dashboard modern menggunakan Bootstrap.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <div class="title">
+        <h2>Kontak</h2>
+    </div>
+
+    <div class="contact">
+        <p>📧 email@email.com</p>
+        <p>💻 github.com/username</p>
+        <p>📍 Indonesia</p>
+    </div>
 </section>
 
 <footer>
-    <p>&copy; 2026 Nyoman Deni | Dibuat dengan HTML & CSS</p>
+    © 2026 Nyoman Deni • Built with HTML & CSS
 </footer>
 
 </body>
