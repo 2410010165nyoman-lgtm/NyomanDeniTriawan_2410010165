@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portofolio Nyoman Deni</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+    line-height:1.6;
+}
+
+.hero{
+    height:100vh;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.hero-content p{
+    font-size:1.2rem;
+    margin-bottom:20px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 28px;
+    background:white;
+    color:#2563eb;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:#2563eb;
+}
+
+.about{
+    text-align:center;
+    max-width:700px;
+    margin:auto;
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact a{
+    color:#2563eb;
+    text-decoration:none;
+}
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+    .hero-content h1{
+        font-size:2.2rem;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Halo, Saya Nyoman Deni</h1>
+        <p>Mahasiswa • Web Developer Pemula • Programmer Masa Depan</p>
+        <a href="#about" class="btn">Lihat Portofolio</a>
+    </div>
+</section>
+
+<section id="about" class="container">
+    <h2 class="section-title">Tentang Saya</h2>
+    <div class="about">
+        <p>
+            Saya sedang belajar HTML, CSS, JavaScript, PHP, dan MySQL.
+            Saya senang membangun website modern serta terus mengembangkan
+            kemampuan pemrograman dan teknologi web.
+        </p>
+    </div>
+</section>
+
+<section class="container">
+    <h2 class="section-title">Keahlian</h2>
+
+    <div class="skills">
+        <div class="card">
+            <h3>HTML5</h3>
+            <p>Membuat struktur website yang rapi dan responsif.</p>
+        </div>
+
+        <div class="card">
+            <h3>CSS3</h3>
+            <p>Mendesain tampilan website modern dan menarik.</p>
+        </div>
+
+        <div class="card">
+            <h3>PHP</h3>
+            <p>Membangun aplikasi web dinamis berbasis server.</p>
+        </div>
+
+        <div class="card">
+            <h3>MySQL</h3>
+            <p>Mengelola database untuk aplikasi web.</p>
+        </div>
+    </div>
+</section>
+
+<section class="container contact">
+    <h2 class="section-title">Kontak</h2>
+    <p>Email: nyomandeni@email.com</p>
+    <p>GitHub: <a href="#">github.com/nyomandeni</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2026 Nyoman Deni | Dibuat dengan HTML & CSS</p>
+</footer>
+
+</body>
+</html>
